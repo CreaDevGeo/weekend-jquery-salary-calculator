@@ -1,12 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>jQuery Salary Calculator</title>
+  <script src="jquery-3.7.0.js"></script>
+  <script src="client.js"></script>
+
 </head>
+
 <body>
-    
+  <h1>Salary Calculator</h1>
+
+  <main>
+    <form>
+
+      <fieldset>
+        <h2>Add Employee</h2>
+       <div id="input-field-items">
+          <input placeholder="First name" type="text" id="employee-first-name">
+          <input placeholder="Last name" type="text" id="employee-last-name">
+          <input placeholder="ID number" type="text" id="employee-id-number">
+          <input placeholder="Job title" type="text" id="employee-job-title">
+          <input placeholder="Annual salary" type="text" id="employee-annual-salary">
+       </div>
+      </fieldset>
+      <button type="submit" id="submit-button">Submit</button>
+
+    </form>
+
+    <table style="width:100%" id="employee-table">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Annual Salary</th>
+      </tr>
+      <tr>
+        <td>Maria</td>
+        <td>Anders</td>
+        <td>4672</td>
+        <td>Customer Service</td>
+        <td>$<span>60000</span></td>
+      </tr>
+      <tr>
+        <td>Frankie</td>
+        <td>James</td>
+        <td>3920</td>
+        <td>Team Lead</td>
+        <td>$<span>80000</span></td>
+      </tr>
+    </table>
+
+    <p id="total-monthly-cost">Total Monthly Cost: $<span>11,666.67</span></p>
+  </main>
+
+
+
+
 </body>
+
 </html>

@@ -37,9 +37,9 @@ Check in your repo, then turn in your work via the Prime Academy Assignment Appl
 
 /* | Tasks |
 
-    - Create an input form that collects employee first name, last name, ID number, job title, annual salary.
-    - Make a 'Submit' button that collects the form information, stores the information to calculate monthly costs, appends information to the DOM and clears the input fields. 
-        - Using the stored information, calculate monthly costs and append this to the to DOM. If the total monthly cost exceeds $20,000, add a red background color to the total monthly cost.
+✅  - Create an input form that collects employee first name, last name, ID number, job title, annual salary.
+✅  - Make a 'Submit' button that collects the form information, stores the information to calculate monthly costs, appends information to the DOM and clears the input fields. 
+    - Using the stored information, calculate monthly costs and append this to the to DOM. If the total monthly cost exceeds $20,000, add a red background color to the total monthly cost.
     - Create a delete button that removes an employee from the DOM. 
         - For Base mode, it does not need to remove that Employee's salary from the reported total.
 
@@ -50,35 +50,76 @@ $(document).ready(readyNow);
 // Function that on DOM load, runs other functions
 function readyNow() {
     
-    // 1. Event listener: On click of submit button, store information
-    // 2. The stored information is then sent to the table's cells
-    // 3. Create a delete button
+    // Event listener for submit button: On click of submit button, run storeEmployeeData
     $('#submit-button').on('click', storeEmployeeData);
-}
 
-// Function to: store employee info inputs, append inputs to table on DOM, create a delete header on table and button, clear input field, run function salaryCalcualtor
+    // Event delegation for delete button that was created
+    $('#employee-table').on('click', '#delete-button', deleteButton)
+} // end readyNow
+
+// Function to: store employee info inputs, append inputs to table on DOM, create a delete header on table and button, clear input field, run function monthlyCostCalculator
 function storeEmployeeData(event) {
-    console.log('Storing employee data. ');
+    console.log('Storing employee data');
     
-    // On event cancel reloading of DOM
+    // On event:
+    // Cancel reloading of DOM
     event.preventDefault()
 
-    // Store form input field values
+
+    // 1. Store form input field values
     let firstName = $('#employee-first-name').val()
     let lastName = $('#employee-last-name').val()
     let idNuber = $('#employee-id-number').val()
     let jobTitle = $('#employee-job-title').val()
-    let annualSalary = $('employee-annual-salary').val()
+    let annualSalary = $('#employee-annual-salary').val()
+
+    // Conditional: 
+    // For ID number shorter than 4 or longer than 6
+    // For Empty input fields, dont add data and row to table
 
     // Testing
-    console.log('Added to table. Employee first name:', firstName);
-    // Append values to DOM
+    console.log('Added to table.');
+    console.log('Employee first name:', firstName);
+    console.log('Employee last name:', lastName);
+    console.log('Employee id number:', Number(idNuber));
+    console.log('Employee job title:', jobTitle);
+    console.log('Employee annual salary:', Number(annualSalary));
 
-    // Create a delete header and button
-    
-    // Clear inputs of form
-    
-    // Run salaryCalcualtor
-}
 
-// Function 
+    // 2. Append form input values and create a delete header and button to DOM
+    $('#employee-table').append(`
+    <tbody>
+    <tr>
+        <td>${firstName}</td>
+        <td>${lastName}</td>
+        <td>${idNuber}</td>
+        <td>${jobTitle}</td>
+        <td>$${Number(annualSalary)}</td>
+        <td><button id="delete-button">Delete</button></td>
+    </tr>
+    </tbody>
+    `);
+    
+    // 3. Clear inputs of form
+    // $('#employee-first-name').val('');
+    // $('#employee-last-name').val('');
+    // $('#employee-id-number').val('');
+    // $('#employee-job-title').val('');
+    // $('#employee-annual-salary').val('');
+    
+    // 4. Run monthlyCostCalculator
+
+    // 5. Delete Button
+    // Event listener: On click of delete button that was appended, run deleteButton
+   
+
+} // end storeEmplyeeData
+
+// Function to delete employee data row in table
+function deleteButton() {
+     // Event delegation
+
+} // end deleteButton
+
+// Function for calculating monthly cost of all employees' annual salary and display it on DOM
+// function monthlyCostCalculator()

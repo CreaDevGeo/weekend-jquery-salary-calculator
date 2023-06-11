@@ -11,12 +11,30 @@ body {
 /* End Default Style Guide */
 
 /* Header Style guide */
+header {
+    /* Animation (Don't know how o make it, just copy and pasted :/) */
+        animation: fadeInAnimation ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+     
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+         }
+    }
+
 h1 {
     width: 100%;
     font-family: 'JetBrains Mono', monospace;
     font-weight: 300;
     text-align: center;
     justify-content: center;
+    
+
 }
 
 header p {

@@ -2,6 +2,20 @@
 <html lang="en">
 
 <head>
+  <!-- Fonts -->
+  <!-- JetBrains Medium -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<!-- JetBrains Extra Bold -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@800&display=swap" rel="stylesheet">
+  <!-- JetBrains Extra Light -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap" rel="stylesheet">
+<!-- End Fonts -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +27,10 @@
 </head>
 
 <body>
-  <h1>Salary Calculator</h1>
+  <header>
+    <h1>Employee Salary<br> <span id="orange-title-header">Calculator</span></h1>
+    <p>Effortlessly manage your employee salaries and calculate monthly costs in a snap. Say goodbye to complex spreadsheets and let the magic ✨ happen with just a few entrees and clicks!</p>
+  </header>
 
   <main>
     <form>
@@ -21,13 +38,13 @@
       <fieldset>
         <h2>Add Employee</h2>
         <p id="non-valid-input"></p>
-       <div id="input-field-items">
+        <div id="input-field-items">
           <input placeholder="First name" type="text" id="employee-first-name" required>
           <input placeholder="Last name" type="text" id="employee-last-name" required>
           <input placeholder="ID number (4-6 digits)" type="text" id="employee-id-number" required>
           <input placeholder="Job title" type="text" id="employee-job-title" required>
           <input placeholder="Annual salary" type="text" id="employee-annual-salary" required>
-       </div>
+        </div>
       </fieldset>
       <button type="submit" id="submit-button">Submit</button>
 
@@ -47,8 +64,8 @@
         </thead>
       </table>
     </div>
-    
-    
+
+
 
     <p id="total-monthly-cost">Total Monthly Cost: $<span id="total-monthly-cost-amount">0</span></p>
   </main>

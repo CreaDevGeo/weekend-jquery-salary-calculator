@@ -61,6 +61,15 @@ fieldset h2 {
     text-align: center;
 }
 
+#non-valid-input {
+    width: 100%;
+    margin: 7px auto;
+    padding: 7px 10px;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 300;
+}
+
 #input-field-items {
     display: flex;
     width: 100%;

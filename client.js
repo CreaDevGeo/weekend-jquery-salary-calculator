@@ -103,6 +103,9 @@ function storeEmployeeData(event) {
         // Adding text to DOM in fieldset element
         $('#non-valid-input').text("Invalid input. Please enter a valid number for ID number.");
 
+        // Clear input field
+        $('#employee-id-number').val('');
+
         // Log to console
         console.log("Invalid input. Please enter a valid ID number.");
         return; // Exit the function if the value is not a valid number
@@ -111,6 +114,9 @@ function storeEmployeeData(event) {
         // The input value isn't an integer, don't add to table or store info
         // Adding text to DOM in fieldset element
         $('#non-valid-input').text("Invalid input. Please enter a valid number for salary.");
+        
+        // Clear input field
+        $('#employee-annual-salary').val('');
 
         // Log to console
         console.log("Invalid input. Please enter a valid salary number.");

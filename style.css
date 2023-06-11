@@ -23,6 +23,8 @@ h1 {
 header p {
     width: 60%;
     margin: 40px auto;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 300;
     font-size: 1.5rem;
     line-height: 27px;
     text-align: center;

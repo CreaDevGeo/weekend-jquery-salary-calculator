@@ -20,12 +20,13 @@
 
       <fieldset>
         <h2>Add Employee</h2>
+        <p id="non-valid-input"></p>
        <div id="input-field-items">
-          <input placeholder="First name" type="text" id="employee-first-name">
-          <input placeholder="Last name" type="text" id="employee-last-name">
-          <input placeholder="ID number (4-6 digits)" type="text" id="employee-id-number">
-          <input placeholder="Job title" type="text" id="employee-job-title">
-          <input placeholder="Annual salary" type="text" id="employee-annual-salary">
+          <input placeholder="First name" type="text" id="employee-first-name" required>
+          <input placeholder="Last name" type="text" id="employee-last-name" required>
+          <input placeholder="ID number (4-6 digits)" type="text" id="employee-id-number" required>
+          <input placeholder="Job title" type="text" id="employee-job-title" required>
+          <input placeholder="Annual salary" type="text" id="employee-annual-salary" required>
        </div>
       </fieldset>
       <button type="submit" id="submit-button">Submit</button>
@@ -49,7 +50,7 @@
     
     
 
-    <p id="total-monthly-cost">Total Monthly Cost: $<span>11,666.67</span></p>
+    <p id="total-monthly-cost">Total Monthly Cost: $<span id="total-monthly-cost-amount">0</span></p>
   </main>
 
 

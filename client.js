@@ -50,7 +50,7 @@ Check in your repo, then turn in your work via the Prime Academy Assignment Appl
 
 */
 
-// Global array for employees tto be stored
+// Global array for employees to be stored
 let employees = [];
 
 // When DOM ready run readyNow
@@ -66,7 +66,7 @@ function readyNow() {
     // Delete Button
     // Event listener: On click of delete button that was appended, run deleteButton
     // Event delegation for delete button that was created
-    $('#employee-table').on('click', '#delete-button', deleteButton);
+    $('#employee-table').on('click', '.delete-button', deleteButton);
 } // end readyNow
 
 // Function to: store employee info inputs, append inputs to table on DOM, create a delete header on table and button, clear input field, run function monthlyCostCalculator
@@ -158,16 +158,16 @@ function storeEmployeeData(event) {
         <td>${idNumber}</td>
         <td>${jobTitle}</td>
         <td class="annual-salary-total">$${Number(annualSalary)}</td>
-        <td><button id="delete-button">Delete</button></td>
+        <td><button class="delete-button">Delete</button></td>
     </tr>
     `);
 
         // 4. Clear inputs of form
-        $('#employee-first-name').val('');
-        $('#employee-last-name').val('');
-        $('#employee-id-number').val('');
-        $('#employee-job-title').val('');
-        $('#employee-annual-salary').val('');
+        // $('#employee-first-name').val('');
+        // $('#employee-last-name').val('');
+        // $('#employee-id-number').val('');
+        // $('#employee-job-title').val('');
+        // $('#employee-annual-salary').val('');
 
         // 4. Run monthlyCostCalculator
         monthlyCostCalculator();
@@ -209,6 +209,7 @@ function monthlyCostCalculator() {
 
     // 3. After they are added, new variable of added salaries is divided by tweleve
     let totalMonthlyCost = totalSalary / 12;
+    totalMonthlyCost = Math.round(totalMonthlyCost);
     console.log('Total monthly cost is:', Number(totalMonthlyCost));
 
     /* Conditionals: 

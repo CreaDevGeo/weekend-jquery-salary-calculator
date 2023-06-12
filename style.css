@@ -166,7 +166,7 @@ td {
     padding: 5px 10px;
 }
 
-#delete-button {
+.delete-button {
     width: 6rem;
     padding: 5px;
     margin: 10px auto;

@@ -45,7 +45,7 @@ Check in your repo, then turn in your work via the Prime Academy Assignment Appl
 ✅      - For Base mode, it does not need to remove that Employee's salary from the reported total.
 
 - Stretch Mode -
-✅    - Add styling or extra functionality that fits with the theme of this assignment.
+✅  - Add styling or extra functionality that fits with the theme of this assignment.
     - Once the employee is deleted, update the Total Monthly Cost section on the page to reflect the employee's removal. HINT: You will need to figure out which employee was removed, in order to subtract their salary from the total. Consider using .text() as a getter, or look into jQuery's .data() function. This is tricky!
 
 */
@@ -152,7 +152,6 @@ function storeEmployeeData(event) {
 
         // 3. Append form input values and create a delete button to DOM
         $('#employee-table').append(`
-    <tbody>
     <tr>
         <td>${firstName}</td>
         <td>${lastName}</td>
@@ -161,7 +160,6 @@ function storeEmployeeData(event) {
         <td class="annual-salary-total">$${Number(annualSalary)}</td>
         <td><button id="delete-button">Delete</button></td>
     </tr>
-    </tbody>
     `);
 
         // 4. Clear inputs of form
@@ -173,7 +171,7 @@ function storeEmployeeData(event) {
 
         // 4. Run monthlyCostCalculator
         monthlyCostCalculator();
-    }
+    } // end else: running rest of function
 
 } // end storeEmplyeeData
 

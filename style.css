@@ -161,6 +161,7 @@ tr {
 }
 
 td {
+    width: 20%;
     border: 1px solid black;
     padding: 5px 10px;
 }
